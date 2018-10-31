@@ -4,6 +4,7 @@ Thesis
 This is the repository for my course Bootstrap 4 Essential Training. The full course is available on [LinkedIn Learning](https://linkedin-learning.pxf.io/c/1252977/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fbootstrap-4-essential-training%3Fu%3D104&subid1=github)
 
 https://www.ime-electrospinning.com/solution-electrospinning/
+https://saostar.vn/the-thao/bong-da/ngoc-trinh-va-loi-xin-loi-cua-thu-mon-bui-tien-dung-2320460.html#images-2320460-1
 Bootstrap—a front-end framework using HTML, CSS3, and jQuery—is designed to help developers quickly and easily build responsive, mobile-ready websites that are cross-browser compatible. An open-source framework, Bootstrap features a 12-column grid and components that are ready to use. In this course, Ray Villalobos helps you get started with Bootstrap by providing an overview of all of the goodies in this popular framework. Ray covers the installation options, and walks through the basic styles that normalize how your content is displayed on different platforms and browsers. He also explains how to use the flexbox grid system to build nearly any kind of layout you can dream up, use different classes to easily get around your project, work with interactive components like dropdowns and carousels, and more.
 
 ## Instructions
