@@ -1,5 +1,7 @@
-# Electrospinning
+# Electrospinning - Make stuff great again ! 
 Thesis
+ Hi every one, I am Viet Anh, this is my project about electrospinning system.
+ 
 ![28423830_1211828305614648_6194511011440472054_o](https://user-images.githubusercontent.com/23720583/47773987-5800b980-dd1e-11e8-95fc-2c6dc8f79772.jpg)
 
  # Electrospinning Project
