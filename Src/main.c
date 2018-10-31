@@ -2,7 +2,9 @@
 /**
   ******************************************************************************
   * @file           : main.c
+	
   * @brief          : Main program body
+	  @ Nguyen Viet Anh - Thesis
   ******************************************************************************
   ** This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
