@@ -40,6 +40,12 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "stm32f1xx_hal_lcd_i2c.h"
+#include "stm32f1xx_hal_delay.h"
+#include "stdio.h"
+
+char buffer[40];
+int var;
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -119,7 +125,9 @@ int main(void)
   MX_USART2_UART_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-
+  lcd_init();
+	lcd_goto_XY(1,0);
+	lcd_send_string("Electrospinning");
   /* USER CODE END 2 */
 
   /* Infinite loop */
