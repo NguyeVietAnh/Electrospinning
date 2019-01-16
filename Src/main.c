@@ -49,8 +49,11 @@
 char buffer[40];
 int var;
 int count;    // Encoder value.
-
+int flag = 0;
 uint32_t value;
+
+
+
 
 /* USER CODE END Includes */
 
@@ -126,23 +129,44 @@ int main(void)
   MX_I2C1_Init();
   MX_USART2_UART_Init();
   MX_TIM3_Init();
-  HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
+	HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL); 
   /* USER CODE BEGIN 2 */
   lcd_init();
 	lcd_goto_XY(1,0);
 	lcd_send_string("Electrospinning");
+	lcd_goto_XY(2,0);
+	lcd_send_string("Speed:");
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+		
 		value = TIM3 ->CNT;
 		sprintf(buffer,"%d",value);
-		lcd_goto_XY(8,0);
+		lcd_goto_XY(2,10);
 		lcd_send_string(buffer);
+		
+		if (HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_5) == RESET)
+		{
+			flag = !flag;
+		}
+		
+		if (flag == 1)
+		{ 
+			
+			lcd_goto_XY(2,0);
+			lcd_send_string(" Run.. ");
+			HAL_Delay(100);
+			lcd_goto_XY(2,0);
+			lcd_send_string(" Run   ");
+			HAL_Delay(100);
+	
+     }
+	
     /* USER CODE END WHILE */
-   
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -237,7 +261,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 255;
+  htim3.Init.Period = 4095;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   sConfig.EncoderMode = TIM_ENCODERMODE_TI12;
